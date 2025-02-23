@@ -40,6 +40,7 @@ class CustomDrawer extends StatelessWidget {
                     image: Assets.imagesLogout,
                   ),
                 ),
+                SizedBox(height: 48),
               ],
             ),
           ),
