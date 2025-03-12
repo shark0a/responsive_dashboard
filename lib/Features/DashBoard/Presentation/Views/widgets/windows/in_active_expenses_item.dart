@@ -11,21 +11,24 @@ class InActiveAllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       // color: Color(0xffFFFFFF),
       decoration: ShapeDecoration(
-        color: Color(0xffFFFFFF),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        color: const Color(0xffFFFFFF),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: BorderSide(color: Color(0xffF1F1F1)),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesItemHeader(imageurl: model.image , ),
-          SizedBox(height: 34),
+          AllExpensesItemHeader(imageurl: model.image),
+          const SizedBox(height: 34),
           Text(model.title, style: AppStyles.styleSemiBold16(context)),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(model.date, style: AppStyles.styleRegular14(context)),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Text(model.balance, style: AppStyles.styleSemiBold24(context)),
         ],
       ),

@@ -3,6 +3,7 @@ import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widge
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/in_active_drawer_item.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/user_info_item.dart';
 import 'package:responsive_dashboard/Features/DashBoard/data/drawer_item_model.dart';
+import 'package:responsive_dashboard/Features/DashBoard/data/user_info_list_tile_model.dart';
 import 'package:responsive_dashboard/Utils/app_images.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -15,10 +16,12 @@ class CustomDrawer extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoListTitle(
-              image: Assets.imagesAvatar3,
-              title: "Lekan Okeowo",
-              subtitle: 'demo@gmail.com',
+            child: UserInfoListTile(
+              userInfoListtileModel: UserInfoListtileModel(
+                image: Assets.imagesAvatar3,
+                title: "Lekan Okeowo",
+                subtitle: 'demo@gmail.com',
+              ),
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(height: 20)),

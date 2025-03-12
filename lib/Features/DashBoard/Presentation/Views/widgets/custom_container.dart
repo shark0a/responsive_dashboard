@@ -16,6 +16,7 @@ class CustomContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(paddingvalue ?? 20),
       decoration: ShapeDecoration(
+        color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(bordervalue ?? 12),
           side: BorderSide(color: Color(0xffFFFFFF)),

@@ -8,16 +8,19 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(
-      bordervalue: 12,
-      paddingvalue: 20,
-      child: Column(
-        children: [
-          AllExpensesHeader(),
-          SizedBox(height: 32),
-          AllExpensesItemListview(),
-        ],
-      ),
+    return Column(
+      children: [
+        CustomContainer(
+          child: Column(
+            children: [
+              AllExpensesHeader(),
+              SizedBox(height: 32),
+              AllExpensesItemListview(),
+            ],
+          ),
+        ),
+        
+      ],
     );
   }
 }
