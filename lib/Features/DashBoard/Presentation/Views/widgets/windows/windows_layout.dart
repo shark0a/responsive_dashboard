@@ -15,7 +15,11 @@ class WindowsLayout extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Column(
-            children: [AllExpenses(), SizedBox(height: 24), QuickInvoice()],
+            children: [
+              AllExpenses(),
+              SizedBox(height: 24),
+              Expanded(child: QuickInvoice()),
+            ],
           ),
         ),
       ],
