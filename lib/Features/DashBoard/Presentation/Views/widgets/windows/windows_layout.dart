@@ -14,12 +14,15 @@ class WindowsLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 2,
-          child: Column(
-            children: [
-              AllExpenses(),
-              SizedBox(height: 24),
-              Expanded(child: QuickInvoice()),
-            ],
+          child: Padding(
+            padding: EdgeInsets.only(top: 20, bottom: 20),
+            child: Column(
+              children: [
+                AllExpenses(),
+                SizedBox(height: 24),
+                Expanded(child: QuickInvoice()),
+              ],
+            ),
           ),
         ),
       ],
