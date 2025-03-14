@@ -48,7 +48,7 @@ class TransactionHistorySection extends StatelessWidget {
             Column(
               children:
                   transactionItem.asMap().entries.map((e) {
-                    int index = e.key;
+                    // int index = e.key;
                     var item = e.value;
                     // if (index == 0) {
                     //   return TransactionHistoryCard(

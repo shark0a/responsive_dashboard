@@ -20,7 +20,7 @@ class TransactionHistoryCard extends StatelessWidget {
             transactionHistoryCardModel.title,
             style: AppStyles.styleSemiBold16(context),
           ),
-          subtitle: Text(
+          subtitle: Text( 
             transactionHistoryCardModel.date,
             style: AppStyles.styleRegular14(context),
           ),
