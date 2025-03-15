@@ -39,6 +39,7 @@ class MyCard extends StatelessWidget {
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
+
             Padding(
               padding: const EdgeInsets.only(right: 48 - 24),
               child: Column(
