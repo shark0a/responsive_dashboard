@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_history_header.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_list_view.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
 
 class TransactionHistorySection extends StatelessWidget {
   const TransactionHistorySection({super.key});

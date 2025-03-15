@@ -10,7 +10,6 @@ class ResponsiveDashbaordApp extends StatelessWidget {
     return MaterialApp(
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-
       title: "Responsive_Dashbaord",
       home: Dashboard(),
       debugShowCheckedModeBanner: false,
