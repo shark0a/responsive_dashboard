@@ -3,21 +3,23 @@ import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widge
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/my_card_page_view.dart';
 import 'package:responsive_dashboard/Utils/app_styles.dart';
 
-class MyCardSection extends StatefulWidget {
-  const MyCardSection({super.key});
+class MyCardsSection extends StatefulWidget {
+  const MyCardsSection({super.key});
 
   @override
-  State<MyCardSection> createState() => _MyCardSectionState();
+  State<MyCardsSection> createState() => _MyCardsSectionState();
 }
 
-class _MyCardSectionState extends State<MyCardSection> {
+class _MyCardsSectionState extends State<MyCardsSection> {
   late PageController pageController;
-  int currentIndex = 0;
+  int currentPageIndex = 0;
+
   @override
   void initState() {
     pageController = PageController();
+
     pageController.addListener(() {
-      currentIndex = pageController.page!.round();
+      currentPageIndex = pageController.page!.round();
       setState(() {});
     });
     super.initState();
@@ -34,8 +36,8 @@ class _MyCardSectionState extends State<MyCardSection> {
         ),
         const SizedBox(height: 20),
         MyCardPageView(pageController: pageController),
-        const SizedBox(height: 15),
-        CustomDotIndicator(currentindex: currentIndex),
+        const SizedBox(height: 20),
+        CustomDotIndicator(currentindex: currentPageIndex),
       ],
     );
   }

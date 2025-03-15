@@ -1,41 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Features/DashBoard/data/transaction_history_card.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
+import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_history_header.dart';
+import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_list_view.dart';
 
-class TransactionHistoryCard extends StatelessWidget {
-  const TransactionHistoryCard({
-    super.key,
-    required this.transactionHistoryCardModel,
-  });
-  final TransactionHistoryCardModel transactionHistoryCardModel;
+class TrasnctionHistory extends StatelessWidget {
+  const TrasnctionHistory({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Card(
-        color: Color(0xffFAFAFA),
-        elevation: 0,
-        child: ListTile(
-          contentPadding: EdgeInsets.all(16),
-          title: Text(
-            transactionHistoryCardModel.title,
-            style: AppStyles.styleSemiBold16(context),
-          ),
-          subtitle: Text( 
-            transactionHistoryCardModel.date,
-            style: AppStyles.styleRegular14(context),
-          ),
-          trailing: Text(
-            transactionHistoryCardModel.balance,
-            style: AppStyles.styleSemiBold20(context).copyWith(
-              color:
-                  transactionHistoryCardModel.iswithdraw
-                      ? Color(0xffF3735E)
-                      : Color(0xff7DD97B),
-              fontWeight: FontWeight.normal,
-            ),
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TransactionHistoryHeader(),
+        SizedBox(height: 20),
+        Text(
+          '13 April 2022',
+          style: TextStyle(
+            color: Color(0xFFAAAAAA),
+            fontSize: 16,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.w500,
+            height: 0,
           ),
         ),
-      ),
+        SizedBox(height: 16),
+        TransctionHistoryListView(),
+      ],
     );
   }
 }

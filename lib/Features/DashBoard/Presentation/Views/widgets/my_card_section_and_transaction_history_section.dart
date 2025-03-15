@@ -9,13 +9,10 @@ class MyCardSectionAndTransactionHistorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomContainer(
-      paddingvalue: 24,
       child: Column(
         children: [
-          MyCardSection(),
-          SizedBox(height: 20),
-          Divider(color: Color(0xffF1F1F1), thickness: 1),
-          SizedBox(height: 20),
+          MyCardsSection(),
+          Divider(height: 40, color: Color(0xffF1F1F1)),
           TransactionHistorySection(),
         ],
       ),

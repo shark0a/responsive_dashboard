@@ -1,72 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_history_card.dart';
+import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/transaction_item.dart';
 import 'package:responsive_dashboard/Features/DashBoard/data/transaction_history_card.dart';
 
-class TransactionListView extends StatelessWidget {
-  const TransactionListView({super.key});
-  final List<TransactionHistoryCardModel> transactionItem = const [
-    TransactionHistoryCardModel(
-      title: "Cash Withdrawal",
-      date: "13 Apr, 2022 at 3:30 PM",
-      balance: "\$20,129",
-      iswithdraw: true,
-    ),
+class TransctionHistoryListView extends StatelessWidget {
+  const TransctionHistoryListView({super.key});
 
+  static const items = [
     TransactionHistoryCardModel(
-      title: "Landing Page project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      balance: "\$2000",
-      iswithdraw: false,
+      title: 'Cash Withdrawal',
+      date: '13 Apr, 2022 ',
+      balance: r'$20,129',
+      isWithdrawal: true,
     ),
-
     TransactionHistoryCardModel(
-      title: "Juni Mobile App project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      balance: "\$20,000",
-      iswithdraw: false,
+      title: 'Landing Page project',
+      date: '13 Apr, 2022 ',
+      balance: r'$20,129',
+      isWithdrawal: false,
+    ),
+    TransactionHistoryCardModel(
+      title: 'Juni Mobile App project',
+      date: '13 Apr, 2022 ',
+      balance: r'$20,129',
+      isWithdrawal: false,
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:
-          transactionItem
-              .map(
-                (e) => TransactionHistoryCard(transactionHistoryCardModel: e),
-              )
-              .toList(),
+      children: items.map((e) => TransctionItem(transctionModel: e)).toList(),
     );
-  
   }
 }
-// Column(
-        //   crossAxisAlignment: CrossAxisAlignment.start,
-        //   children: [
-        //     Text(
-        //       "13 April 2022",
-        //       style: AppStyles.styleMedium16(
-        //         context,
-        //       ).copyWith(color: Color(0xffAAAAAA)),
-        //     ),
-        //     // Column(
-        //     //   children:
-        //     //       transactionItem.asMap().entries.map((e) {
-        //     //         // int index = e.key;
-        //     //         var item = e.value;
-        //     //         // if (index == 0) {
-        //     //         //   return TransactionHistoryCard(
-        //     //         //     transactionHistoryCardModel: item,
-        //     //         //     color: Color(0xffF3735E),
-        //     //         //   );
-        //     //         // } else {
-        //     //         //   return TransactionHistoryCard(
-        //     //         //     transactionHistoryCardModel: item,
-        //     //         //   );
-        //     //         // }
-        //     //         return TransactionHistoryCard(
-        //     //           transactionHistoryCardModel: item,
-        //     //         );
-        //     //       }).toList(),
-        //     // ),
-        //   ],
-        // ),

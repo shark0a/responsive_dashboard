@@ -1,12 +1,8 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/custom_container.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/icome_section.dart';
-import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/income_chart.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/my_card_section_and_transaction_history_section.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/windows/all_expenses.dart';
-import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/windows/income_header.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/windows/quick_invoice.dart';
 
 class WindowsLayout extends StatelessWidget {
@@ -39,7 +35,7 @@ class WindowsLayout extends StatelessWidget {
               children: [
                 MyCardSectionAndTransactionHistorySection(),
                 SizedBox(height: 24),
-                IcomeSection(),
+                Expanded(child: IcomeSection()),
               ],
             ),
           ),
