@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/Mobile/mobile_layout.dart';
+import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/Mobile/dash_board_mobile_layout.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/Tablet/tablet_layout.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/adabtive_layout.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/custom_drawer.dart';
@@ -20,7 +20,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       key: scaffoldkey,
       appBar:
-          MediaQuery.of(context).size.width - 32 < 1300
+          MediaQuery.of(context).size.width < 800
               ? AppBar(
                 backgroundColor: Colors.white,
                 leading: IconButton(
@@ -35,7 +35,7 @@ class _DashboardState extends State<Dashboard> {
       drawer: CustomDrawer(),
       body: AdabtiveLayout(
         windowsLayout: (context) => WindowsLayout(),
-        mobileLayout: (context) => MobileLayout(),
+        mobileLayout: (context) => DashBoardMobileLayout(),
         tabletLayout: (context) => TabletLayout(),
       ),
     );

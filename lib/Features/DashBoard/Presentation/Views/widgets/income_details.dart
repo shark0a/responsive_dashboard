@@ -29,7 +29,7 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      shrinkWrap: false,
+      shrinkWrap: true,
       itemCount: chartDetails.length,
       itemBuilder: (context, index) {
         return IncomeChartItem(chartItemModel: chartDetails[index]);

@@ -34,7 +34,7 @@ class IncomeHeader extends StatelessWidget {
                     )
                     .toList(),
             onChanged: (value) {},
-            underline: SizedBox(), // Removes default underline
+            underline: SizedBox(), 
           ),
         ),
       ],

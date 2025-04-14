@@ -17,12 +17,12 @@ class WindowsLayout extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Padding(
-            padding: EdgeInsets.only(top: 20, bottom: 20),
+            padding: EdgeInsets.only(top: 40),
             child: Column(
               children: [
                 AllExpenses(),
                 SizedBox(height: 24),
-                Expanded(child: QuickInvoice()),
+                Expanded(child: SingleChildScrollView(child: QuickInvoice())),
               ],
             ),
           ),
@@ -30,7 +30,7 @@ class WindowsLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.only(top: 21, right: 32),
+            padding: EdgeInsets.only(top: 40, right: 32),
             child: Column(
               children: [
                 MyCardSectionAndTransactionHistorySection(),
