@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/DashBoard/data/transaction_history_card.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class TransctionItem extends StatelessWidget {
   const TransctionItem({super.key, required this.transctionModel});
@@ -13,15 +13,21 @@ class TransctionItem extends StatelessWidget {
       color: const Color(0xFFFAFAFA),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
-        title: Text(
-          transctionModel.title,
-          style: AppStyles.styleSemiBold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            transctionModel.title,
+            style: AppStyles.styleSemiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          transctionModel.date,
-          style: AppStyles.styleRegular16(
-            context,
-          ).copyWith(color: const Color(0xFFAAAAAA)),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            transctionModel.date,
+            style: AppStyles.styleRegular16(
+              context,
+            ).copyWith(color: const Color(0xFFAAAAAA)),
+          ),
         ),
         trailing: Text(
           transctionModel.balance,

@@ -28,12 +28,17 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: chartDetails.length,
-      itemBuilder: (context, index) {
-        return IncomeChartItem(chartItemModel: chartDetails[index]);
-      },
+    return Column(
+      children:
+          chartDetails.map((e) => IncomeChartItem(chartItemModel: e)).toList(),
     );
+
+    // ListView.builder(
+    //   shrinkWrap: false,
+    //   itemCount: chartDetails.length,
+    //   itemBuilder: (context, index) {
+    //     return IncomeChartItem(chartItemModel: chartDetails[index]);
+    //   },
+    // );
   }
 }

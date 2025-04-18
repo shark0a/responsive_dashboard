@@ -17,7 +17,7 @@ class AdabtiveLayout extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth < 800) {
           return mobileLayout(context);
-        } else if (constraints.maxWidth <= 1200) {
+        } else if (constraints.maxWidth <= 1309) {
           return tabletLayout(context);
         } else {
           return windowsLayout(context);

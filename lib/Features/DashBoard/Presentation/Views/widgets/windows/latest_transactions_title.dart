@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/DashBoard/Presentation/Views/widgets/windows/lastest_transaction_list_view.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class LatestTransactions extends StatelessWidget {
   const LatestTransactions({super.key});

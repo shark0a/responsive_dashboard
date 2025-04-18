@@ -15,29 +15,43 @@ class WindowsLayout extends StatelessWidget {
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 2,
-          child: Padding(
-            padding: EdgeInsets.only(top: 40),
-            child: Column(
-              children: [
-                AllExpenses(),
-                SizedBox(height: 24),
-                Expanded(child: SingleChildScrollView(child: QuickInvoice())),
-              ],
-            ),
-          ),
-        ),
-        SizedBox(width: 32),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.only(top: 40, right: 32),
-            child: Column(
-              children: [
-                MyCardSectionAndTransactionHistorySection(),
-                SizedBox(height: 24),
-                Expanded(child: IcomeSection()),
-              ],
-            ),
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40),
+                        child: Column(
+                          children: [
+                            AllExpenses(),
+                            SizedBox(height: 24),
+                            Expanded(child: QuickInvoice()),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 32),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40, right: 32),
+                        child: Column(
+                          children: [
+                            MyCardSectionAndTransactionHistorySection(),
+                            SizedBox(height: 24),
+                            Expanded(child: IcomeSection()),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ],

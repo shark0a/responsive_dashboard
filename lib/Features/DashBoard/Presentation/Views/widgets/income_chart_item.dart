@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/Features/DashBoard/data/chart_details_model.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class IncomeChartItem extends StatelessWidget {
   const IncomeChartItem({super.key, required this.chartItemModel});

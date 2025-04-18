@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/Utils/app_styles.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class AllExpensesHeader extends StatelessWidget {
   const AllExpensesHeader({
